@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Login Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: black;
+        }
+
+        .container {
+            width: 300px;
+            padding: 16px;
+            background-color: white;
+            margin: 0 auto;
+            padding-top: 0;
+            margin-top: 200px;
+            border: 1px solid black;
+            border-radius: 4px;
+        }
+
+        input[type=email],
+        input[type=password] {
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: rgb(248, 80, 19);
+            color: white;
+            padding: 14px 20px;
+            margin-top: 15px;
+            border: none;
+            cursor: pointer;
+            width: 25%;
+        }
+
+        button:hover {
+            opacity: 0.8;
+        }
+
+        a {
+            color: #000;
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: orangered;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="container">
+        <h2>Log in</h2>
+        <form name="loginForm" onSubmit="return validateForm()" method="post">
+            <label for="email"><b>Email</b></label>
+            <input type="email" placeholder="Your email..." id="email" name="email" required>
+
+            <label for="psw"><b>Password</b></label>
+            <input type="password" placeholder="Your password..." id="psw" name="psw" required>
+
+            <a href="c:\Users\PULSE Electronics\Desktop\Projekti\Login Form\Register Form.html">Don't have an account? Sign up
+                here.</a>
+
+            <button type="submit">Login</button>
+
+        </form>
+    </div>
+
+    <script>
+        function validateForm() {
+            var email = document.forms["loginForm"]["email"].value;
+            var password = document.forms["loginForm"]["psw"].value;
+
+            var emailRegex = /[a-zA-Z.-_]+@+[a-z]+\.+[a-z]{2,3}$/
+            if(!emailRegex.test(email)) {
+                alert('Email is incorrect');
+                return false;
+            }
+
+            var passwordRegex = /^[A-Z][a-zA-Z]+\d{1,3}$/
+            if(!passwordRegex.test(password)) {
+                alert('Password is incorrect');
+                return false;
+            }
+
+            alert('You have logged in into your account!');
+            return true;
+        }
+    </script>
+
+</body>
+
+</html>
