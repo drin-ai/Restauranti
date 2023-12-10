@@ -1,0 +1,40 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    margin-left: 25px;
+}
+.headeri{
+    display: flex;
+    font-size: xx-large;
+    font-weight: bold;
+    align-items: center;
+}
+.name :hover{
+    cursor: pointer;
+}
+ul{
+    width: 30%;
+    font-size: x-large;
+    display: flex;
+    list-style: none;
+    justify-content: space-evenly;
+    align-items: center;
+}
+ul li:hover {
+    font-weight: bold;
+    cursor: pointer;
+    color: orangered;
+}
+main{
+    background-color: gainsboro;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.text{
+    margin-bottom: 10%;
